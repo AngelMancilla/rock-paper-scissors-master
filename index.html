@@ -19,20 +19,38 @@
       </div>
       <div class="Header-Score-Container">
         <h4 class="Header-Score-Title" >SCORE</h4>
-        <p class="Header-Score-Points" >12</p>
+        <p class="Header-Score-Points" id="Score-Points" >0</p>
       </div>
     </div>
     <div class="Game">
-      <div class="Game-Btn-Container Game-Btn-Container-Paper">
-        <div class="Game-Btn-Container-inside"></div>
+      <div class="Game-Btn-Container Game-Btn-Container-Paper" id="Btn-Paper">
+        <div class="Game-Btn-Container-Inside">
+          <img class="Game-Btn-Icon" src="./images/icon-paper.svg" alt="Paper icon">
+        </div>
       </div>
-      <div class="Game-Btn-Container Game-Btn-Container-Scissors">
-        <div class="Game-Btn-Container-inside"></div>
+      <div class="Game-Btn-Container Game-Btn-Container-Scissors" id="Btn-Scissors">
+        <div class="Game-Btn-Container-Inside">
+          <img class="Game-Btn-Icon" src="./images/icon-scissors.svg" alt="Scissors icon">
+        </div>
       </div>
-      <div class="Game-Btn-Container Game-Btn-Container-Rock">
-        <div class="Game-Btn-Container-inside"></div>
+      <div class="Game-Btn-Container Game-Btn-Container-Rock" id="Btn-Rock">
+        <div class="Game-Btn-Container-Inside">
+          <img class="Game-Btn-Icon" src="./images/icon-rock.svg" alt="Rock icon">
+        </div>
       </div>  
     </div>
   </div>
+  <button class="Btn-Rules" id="Btn-Rules" data-modal-target="#rules-modal">RULES</button>
+  <div class="modal" id="rules-modal">
+    <div class="modal-header">
+      <h4 class="modal-header-title">RULES</h4>
+      <button class="close-btn">&times;</button>
+    </div>
+    <div class="modal-img">
+      <img src="./images/image-rules.svg" alt="Reglas del juego">
+    </div>
+  </div>
 </body>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./js/App.js"></script>
 </html>

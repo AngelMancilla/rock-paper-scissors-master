@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 body {
   background: linear-gradient(to bottom, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 16px;
 }
@@ -57,6 +60,7 @@ body .Container .Header-Container .Header-Score-Container .Header-Score-Points {
   font-size: 3.8rem;
   color: hsl(229, 25%, 31%);
   margin: 0;
+  font-weight: 700;
 }
 body .Container .Game {
   margin-top: 3rem;
@@ -64,36 +68,117 @@ body .Container .Game {
   height: 450px;
 }
 body .Container .Game .Game-Btn-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   height: 190px;
   width: 190px;
   border: none;
   border-radius: 100%;
   position: relative;
 }
-body .Container .Game .Game-Btn-Container-Inside {
-  width: 70px;
-  height: 70px;
+body .Container .Game .Game-Btn-Container:hover {
+  cursor: pointer;
+}
+body .Container .Game .Game-Btn-Container .Game-Btn-Container-Inside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 140px;
+  height: 133px;
   border: none;
   border-radius: 100%;
   background: white;
+  box-shadow: 1px -7px 0px 0px rgb(188, 193, 212);
+}
+body .Container .Game .Game-Btn-Container .Game-Btn-Icon {
+  width: 60px;
 }
 body .Container .Game .Game-Btn-Container-Paper {
   left: 29px;
   top: 0px;
   background: linear-gradient(to bottom, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  box-shadow: 0px 10px 0px 0px hsl(230, 54%, 49%);
+  box-shadow: 0px 7px 0px 0px rgb(41, 69, 193);
+}
+body .Container .Game .Game-Btn-Container-Paper:hover {
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.5);
 }
 body .Container .Game .Game-Btn-Container-Scissors {
   left: 281px;
   top: -190px;
   background: linear-gradient(to bottom, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  box-shadow: 0px 10px 0px 0px hsl(39, 89%, 44%);
+  box-shadow: 0px 7px 0px 0px rgb(201, 109, 26);
+}
+body .Container .Game .Game-Btn-Container-Scissors:hover {
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.5);
 }
 body .Container .Game .Game-Btn-Container-Rock {
   left: 154px;
   top: -171px;
   background: linear-gradient(to bottom, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-  box-shadow: 0px 10px 0px 0px hsl(349, 65%, 45%);
+  box-shadow: 0px 7px 0px 0px rgb(159, 20, 48);
 }
-
-/*# sourceMappingURL=style.css.map */
+body .Container .Game .Game-Btn-Container-Rock:hover {
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.5);
+}
+body .Btn-Rules {
+  font-size: 1rem;
+  background: none;
+  color: hsl(0, 0%, 71%);
+  border: 2px solid hsl(217, 6%, 50%);
+  border-radius: 8px;
+  font-weight: 300;
+  padding: 10px;
+  width: 7.5rem;
+}
+body .Btn-Rules:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5), 0 0 1em rgba(255, 255, 255, 0.5);
+}
+body .modal {
+  width: 21rem;
+  height: 22rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  border-radius: 10px;
+  padding: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: none;
+}
+body .modal-img {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+body .modal-header {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+body .modal-header-title {
+  font-size: 1.5rem;
+  color: rgb(64, 66, 85);
+  margin: 0.5rem;
+}
+body .modal .close-btn {
+  border: none;
+  background: none;
+  font-size: 3rem;
+  font-weight: 100;
+  color: rgb(182, 185, 201);
+}
+body .modal .close-btn:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
